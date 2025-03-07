@@ -27,8 +27,11 @@ export class User{
 
 class Maneger extends User{
 
+    private code: string;
+
     constructor(name: string, email: string, code: string){
-        super(name, email, code)
+        super(name, email)
+        this.code = code
     }
 
     public getName(): string {
