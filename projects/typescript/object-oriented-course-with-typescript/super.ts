@@ -54,5 +54,5 @@ class Admin extends User{
 
 }
 
-const maneger1 = new Maneger('Maneger1', 'maneger@email.com'. '2rja5')
+const maneger1 = new Maneger('Maneger1', 'maneger@email.com', '2rja5')
 console.log(maneger1.getName())
