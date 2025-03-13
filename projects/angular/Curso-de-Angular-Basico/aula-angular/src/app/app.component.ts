@@ -3,11 +3,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';  // ✅ Importando FormsModule
 import { ContatoComponent } from './pagina/contato/contato.component';
+import { MenuComponent } from './pagina/menu/menu.component';
+import { HomeComponent } from './pagina/home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true, // Indica que é um Standalone Component
-  imports: [CommonModule, FormsModule, ContatoComponent], 
+  imports: [CommonModule, FormsModule, ContatoComponent, MenuComponent, HomeComponent], 
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

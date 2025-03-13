@@ -1,32 +1,17 @@
 <div class="container">
 
+  <header>
+    <h1>Turismo SA</h1>
+  </header>
 
-<div class="form-group">
-  <label>Digite o nome de um objeto</label>
-  <input type="text" name="teste" [(ngModel)]="nome" >
+  <nav>
+    <app-menu></app-menu>
+  </nav>
 
-
-  <button class="btn btn-success" (click)="add()">Adicionar</button>
-</div>
-
-<p class="alert alert-danger">Seja bem vindo {{nome}}</p>
-<app-contato></app-contato>
-
-<p class="alert alert-primary">Projeto {{nome}}</p>
+  <section>
+    <app-home></app-home>
+  </section>
 
 
-<ul>
-  <li *ngFor="let v of vetor">{{v}}</li>
-</ul>
-
-<table class="table">
-  <tr *ngFor="let o of vetor; let i = index">
-    <td>{{ i }}</td>
-    <td>{{ o }}</td>
-    <td>
-      <button class="btn btn-outline-danger" (click)="remover(i)">X</button>
-    </td>
-  </tr>
-</table>
 
 </div>
