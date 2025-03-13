@@ -5,5 +5,10 @@ import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay())]
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }), // Mantém otimização de detecção de eventos
+    provideRouter(routes), // Mantém o roteamento funcionando
+    //provideClientHydration(withEventReplay())  ❌ Sem `provideClientHydration()`, então a hidratação continua desativada
+  ]
+
 };

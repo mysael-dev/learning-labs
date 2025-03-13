@@ -2,8 +2,11 @@
 
 
 <div class="form-group">
-  <label>Digite seu nome</label>
-  <input type="text" name="teste" [(ngModel)]="nome">
+  <label>Digite o nome de um objeto</label>
+  <input type="text" name="teste" [(ngModel)]="nome" >
+
+
+  <button class="btn btn-success" (click)="add()">Adicionar</button>
 </div>
 
 <p class="alert alert-danger">Seja bem vindo {{nome}}</p>
@@ -16,10 +19,11 @@
 </ul>
 
 <table class="table">
-  <tr *ngFor="let o of vetor, let i=index">
-    <td>{{i}}</td>
+  <tr *ngFor="let o of vetor; let i = index">
+    <td>{{ i }}</td>
+    <td>{{ o }}</td>
     <td>
-      {{o}}
+      <button class="btn btn-outline-danger" (click)="remover(i)">X</button>
     </td>
   </tr>
 </table>
