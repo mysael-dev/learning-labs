@@ -8,6 +8,7 @@ import { HomeComponent } from './pagina/home/home.component';
 import { RouterModule, RouterOutlet } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true, // Indica que é um Standalone Component

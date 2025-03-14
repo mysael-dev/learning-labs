@@ -7,11 +7,11 @@
         <th>Fabricação</th>
     </tr>
     <tr>
-        <td>{{p1.nome}}</td>
+        <td>{{p1.nome | uppercase}}</td>
         <td>{{p1.email}}</td>
-        <td>{{p1.valor}}</td>
-        <td>{{p1.desconto}}</td>
-        <td>{{p1.fabricacao}}</td>
+        <td>{{p1.valor | currency: 'BRL'}}</td>
+        <td>{{p1.desconto | percent}}</td>
+        <td>{{p1.fabricacao | date: 'dd/MM/yyyy'}}</td>
     </tr>
 
 </table>
